@@ -1,5 +1,6 @@
 import React from "react";
 import { TouchableOpacity, Image, StyleSheet } from "react-native";
+import ENV from "../env/env";
 
 const MapPreview = (props) => {
   let imagePreviewUrl;
@@ -13,7 +14,8 @@ const MapPreview = (props) => {
       props.location.lat +
       "," +
       props.location.lng +
-      "&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&key=AIzaSyCBy3GeJBuumv8mheIyiP80etTxCkYI3WA";
+      "&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&key=" +
+      ENV.googleApiKey;
   }
   return (
     <TouchableOpacity
